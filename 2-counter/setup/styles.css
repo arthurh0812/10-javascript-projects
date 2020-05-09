@@ -1,12 +1,12 @@
 /*
-=============== 
+===============
 Fonts
 ===============
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 /*
-=============== 
+===============
 Variables
 ===============
 */
@@ -54,7 +54,7 @@ Variables
   --fixed-width: 620px;
 }
 /*
-=============== 
+===============
 Global Styles
 ===============
 */
@@ -169,13 +169,39 @@ p {
   }
 }
 /*
-=============== 
+===============
+Nav
+===============
+*/
+
+nav {
+  background: var(--clr-white);
+  height: 3rem;
+  display: grid;
+  align-items: center;
+  box-shadow: var(--dark-shadow);
+}
+.nav-center {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-center h4 {
+  margin-bottom: 0;
+  color: var(--clr-primary-5);
+}
+
+/*
+===============
 Counter
 ===============
 */
 
 main {
-  min-height: 100vh;
+  min-height: calc(100vh - 3rem);
   display: grid;
   place-items: center;
 }
@@ -188,4 +214,12 @@ main {
 }
 .btn {
   margin: 0.5rem;
+}
+
+.green-count {
+  color: rgb(85, 200, 30);
+}
+
+.red-count {
+  color: rgb(220, 15, 15);
 }
