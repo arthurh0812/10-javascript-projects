@@ -1,12 +1,12 @@
 /*
-=============== 
+===============
 Fonts
 ===============
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 /*
-=============== 
+===============
 Variables
 ===============
 */
@@ -36,7 +36,7 @@ Variables
   --clr-grey-7: hsl(211, 27%, 70%);
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(206, 33%, 96%);
+  --clr-grey-10: hsl(208, 100%, 97%);
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
@@ -54,7 +54,7 @@ Variables
   --fixed-width: 620px;
 }
 /*
-=============== 
+===============
 Global Styles
 ===============
 */
@@ -175,7 +175,7 @@ p {
   }
 }
 /*
-=============== 
+===============
 Nav
 ===============
 */
@@ -213,7 +213,7 @@ nav a:hover {
   color: var(--clr-primary-5);
 }
 /*
-=============== 
+===============
 Container
 ===============
 */
