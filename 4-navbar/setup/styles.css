@@ -220,6 +220,9 @@ nav {
   color: var(--clr-primary-5);
   padding-left: 1.5rem;
 }
+.links .active {
+  color: var(--clr-primary-4);
+}
 .social-icons {
   display: none;
 }
