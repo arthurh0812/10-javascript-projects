@@ -209,7 +209,7 @@ main {
   margin-bottom: 4rem;
 }
 .title:hover .underline{
-  width: 12rem;
+  width: 10rem;
 }
 .underline {
   height: 0.25rem;
