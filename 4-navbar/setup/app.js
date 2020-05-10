@@ -3,3 +3,12 @@
 // add - add class
 // remove - remove class
 // toggle - toggles class
+
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.links');
+
+// EventListeners
+navToggle.addEventListener('click', function(){
+  navToggle.classList.toggle('nav-toggle-pressed');
+  navLinks.classList.toggle('show-links');
+})

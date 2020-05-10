@@ -1,12 +1,12 @@
 /*
-=============== 
+===============
 Fonts
 ===============
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 /*
-=============== 
+===============
 Variables
 ===============
 */
@@ -45,7 +45,7 @@ Variables
   --clr-black: #222;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
-  --transition: all 0.3s linear;
+  --transition: all 0.15s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -54,7 +54,7 @@ Variables
   --fixed-width: 620px;
 }
 /*
-=============== 
+===============
 Global Styles
 ===============
 */
@@ -176,7 +176,7 @@ main {
   place-items: center;
 }
 /*
-=============== 
+===============
 Navbar
 ===============
 */
@@ -195,10 +195,11 @@ nav {
   color: var(--clr-primary-5);
   background: transparent;
   border-color: transparent;
-  transition: var(--transition);
+  transition: all 0.15s linear;
   cursor: pointer;
 }
-.nav-toggle:hover {
+/* TOGGLE CLASS */
+.nav-toggle-pressed {
   color: var(--clr-primary-1);
   transform: rotate(90deg);
 }
@@ -224,9 +225,9 @@ nav {
 }
 /* BY DEFAULT HIDE LINKS */
 .links {
-  /* height: 0;
+  height: 0;
   overflow: hidden;
-  transition: var(--transition); */
+  transition: all 0.3s linear;
 }
 /* TOGGLE CLASS */
 .show-links {
