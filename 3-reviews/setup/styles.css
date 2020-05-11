@@ -230,6 +230,9 @@ main {
   box-shadow: var(--light-shadow);
   transition: var(--transition);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .review:hover {
   box-shadow: var(--dark-shadow);
@@ -286,6 +289,10 @@ main {
 #info {
   margin-bottom: 0.75rem;
 }
+.button-container {
+  display: flex;
+  justify-content: center;
+}
 .prev-btn,
 .next-btn {
   color: var(--clr-primary-7);
@@ -304,12 +311,13 @@ main {
   margin-top: 0.5rem;
   background: var(--clr-primary-10);
   color: var(--clr-primary-5);
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0rem;
   text-transform: capitalize;
   border-radius: var(--radius);
   transition: var(--transition);
   border-color: var(--clr-primary-5);
   cursor: pointer;
+  width: 40%;
 }
 .random-btn:hover {
   background: var(--clr-primary-5);
