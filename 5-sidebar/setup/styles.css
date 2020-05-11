@@ -26,6 +26,7 @@ Variables
   --clr-primary-9: hsl(205, 90%, 88%);
   --clr-primary-10: hsl(205, 100%, 96%);
   /* darkest grey - used for headings */
+  --clr-grey-0: hsl(216, 6%, 17%);
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
@@ -45,7 +46,7 @@ Variables
   --clr-black: #222;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
-  --transition: all 0.3s linear;
+  --transition: all 0.15s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -181,31 +182,21 @@ Sidebar
 */
 .sidebar-toggle {
   position: fixed;
-  top: 2rem;
-  right: 3rem;
+  top: 1rem;
+  left: 2rem;
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: var(--clr-primary-5);
+  color: var(--clr-grey-0);
   transition: var(--transition);
   cursor: pointer;
-  animation: bounce 2s ease-in-out infinite;
 }
 .sidebar-toggle:hover {
-  color: var(--clr-primary-7);
+  color: var(--clr-grey-7);
 }
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
+.sidebar-toggle:focus {
+  background: radial-gradient(grey);
 }
-
 .sidebar-header {
   display: flex;
   justify-content: space-between;
@@ -223,7 +214,6 @@ Sidebar
 }
 .close-btn:hover {
   color: var(--clr-red-light);
-  transform: rotate(360deg);
 }
 .logo {
   justify-self: center;
@@ -269,7 +259,7 @@ Sidebar
   grid-template-rows: auto 1fr auto;
   row-gap: 1rem;
   box-shadow: var(--clr-red-dark);
-  transition: var(--transition);
+  transition: all 0.2s linear;
   transform: translate(-100%);
 }
 .show-sidebar {
