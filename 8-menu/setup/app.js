@@ -121,8 +121,8 @@ function displayMenuItems(menuItems){
 };
 
 
-function displayMenuButtons(i){
-  const categories = i.reduce(
+function displayMenuButtons(array){
+  const categories = array.reduce(
     function(values, item){
       if(!values.includes(item.category)){
         values.push(item.category);
@@ -159,13 +159,13 @@ function displayMenuButtons(i){
         };
       });
       const category = e.currentTarget.dataset.id;
-      const menuCategory = i.filter(function(menuItem){
+      const menuCategory = array.filter(function(menuItem){
         if(menuItem.category === category){
           return menuItem;
         }
       });
       if(category === "all"){
-        displayMenuItems(i);
+        displayMenuItems(array);
       }
       else{
         displayMenuItems(menuCategory);
