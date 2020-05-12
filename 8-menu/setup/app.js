@@ -71,4 +71,105 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "juicy steak",
+    category: "dinner",
+    price: 29.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
+  {
+    id: 11,
+    title: "french croissant",
+    category: "breakfast",
+    price: 8.99,
+    img: "./images/item-11.jpeg",
+    desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus mollitia facere modi quis facilis molestias, dolore sunt architecto iure quibusdam dolorum quaerat corporis ex perferendis?`,
+  },
 ];
+
+const sectionCenter = document.querySelector('.section-center');
+const filterButtonContainer = document.querySelector('.btn-container');
+
+// load content
+window.addEventListener('DOMContentLoaded', function(){
+  displayMenuItems(menu);
+  displayMenuButtons(menu);
+});
+
+
+function displayMenuItems(menuItems){
+  let displayMenu = menuItems.map(function(item){
+    return `<article class="menu-item">
+  <img src=${item.img} class="photo" alt="${item.title}">
+  <div class="item-info">
+    <header>
+      <h4>${item.title}</h4>
+      <h4 class="price">$${item.price}</h4>
+    </header>
+    <p class="item-text">
+      ${item.desc}
+    </p>
+  </div>
+</article>
+`;  
+  });
+
+  displayMenu = displayMenu.join('');
+  sectionCenter.innerHTML = displayMenu;
+};
+
+
+function displayMenuButtons(i){
+  const categories = i.reduce(
+    function(values, item){
+      if(!values.includes(item.category)){
+        values.push(item.category);
+      };
+      return values;
+  }, ['all']);
+  const categoryButtons = categories.map(function(category){
+    if(category == 'all'){
+      return `<div class="filter-btn filter-btn-active" data-id="${category}">
+  ${category}
+</div>
+`
+    }
+    else{
+      return `<div class="filter-btn" data-id="${category}">
+  ${category}
+</div>
+`
+    }
+  }).join("");
+  // overwriting HTML with all buttons for each differnt category
+  filterButtonContainer.innerHTML = categoryButtons;
+  // selecting the filter buttons via class
+  const filterButtons = filterButtonContainer.querySelectorAll('.filter-btn');
+  // filter buttons
+  filterButtons.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      filterButtons.forEach(function(button){
+        if(button == e.currentTarget){
+          e.currentTarget.classList.add('filter-btn-active');
+        }
+        else{
+          button.classList.remove('filter-btn-active');
+        };
+      });
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = i.filter(function(menuItem){
+        if(menuItem.category === category){
+          return menuItem;
+        }
+      });
+      if(category === "all"){
+        displayMenuItems(i);
+      }
+      else{
+        displayMenuItems(menuCategory);
+      };
+    });
+  });
+}

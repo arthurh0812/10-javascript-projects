@@ -205,8 +205,9 @@ main {
   place-items: center;
 }
 .title {
+  display: inline-block;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .title:hover .underline{
   width: 10rem;
@@ -222,6 +223,8 @@ main {
 .container {
   width: 80vw;
   max-width: var(--fixed-width);
+  display: grid;
+  place-items: center;
 }
 .review {
   background: var(--clr-white);
