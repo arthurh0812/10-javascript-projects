@@ -91,6 +91,9 @@ const menu = [
 
 const sectionCenter = document.querySelector('.section-center');
 const filterButtonContainer = document.querySelector('.btn-container');
+const toggleButton = document.querySelector('.sidebar-toggle');
+const closeButton = document.querySelector('.close-btn');
+const sidebar = document.querySelector('.sidebar');
 
 // load content
 window.addEventListener('DOMContentLoaded', function(){
@@ -99,6 +102,16 @@ window.addEventListener('DOMContentLoaded', function(){
 });
 
 
+// Sidebar EventListeners
+toggleButton.addEventListener('click', function(){
+  sidebar.classList.toggle('show-sidebar');
+});
+
+closeButton.addEventListener('click', function(){
+  sidebar.classList.remove('show-sidebar');
+});
+
+// Functions
 function displayMenuItems(menuItems){
   let displayMenu = menuItems.map(function(item){
     return `<article class="menu-item">

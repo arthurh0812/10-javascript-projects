@@ -1,6 +1,17 @@
 //using selectors inside the element
 
 const questions = document.querySelectorAll('.question');
+const toggleButton = document.querySelector('.sidebar-toggle');
+const closeButton = document.querySelector('.close-btn');
+const sidebar = document.querySelector('.sidebar');
+
+toggleButton.addEventListener('click', function(){
+    sidebar.classList.toggle('show-sidebar');
+});
+
+closeButton.addEventListener('click', function(){
+    sidebar.classList.remove('show-sidebar');
+});
 
 questions.forEach(function(question){
     const button = question.querySelector('.question-btn');
@@ -13,9 +24,6 @@ questions.forEach(function(question){
         question.classList.toggle('show-text');
     });
 });
-
-
-
 
 // traversing the dom
 
