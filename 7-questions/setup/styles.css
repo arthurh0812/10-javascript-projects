@@ -47,7 +47,7 @@ Variables
   --clr-black: #222;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
-  --transition: all 0.1s linear;
+  --transition: all 0.15s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -328,6 +328,11 @@ Sidebar
   transition: var(--transition);
 }
 .links a:hover {
+  background: var(--clr-primary-9);
+  color: var(--clr-primary-5);
+  padding-left: 1.75rem;
+}
+#side-link-active {
   background: var(--clr-primary-8);
   color: var(--clr-primary-5);
   padding-left: 1.75rem;

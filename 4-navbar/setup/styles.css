@@ -332,6 +332,11 @@ Sidebar
   transition: var(--transition);
 }
 .side-links a:hover {
+  background: var(--clr-primary-9);
+  color: var(--clr-primary-5);
+  padding-left: 1.75rem;
+}
+#side-link-active {
   background: var(--clr-primary-8);
   color: var(--clr-primary-5);
   padding-left: 1.75rem;
