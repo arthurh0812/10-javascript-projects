@@ -21,6 +21,9 @@ const colors = ["aliceblue", "antiquewhite", "aqua", "aquamarine", "azure",
 
 const button = document.getElementById('btn');
 const color = document.querySelector('.color');
+const toggleButton = document.querySelector('.sidebar-toggle');
+const closeButton = document.querySelector('.close-btn');
+const sidebar = document.querySelector('.sidebar');
 
 button.addEventListener('click', function(){
   // Pick random number bewteen 0 - 5;
@@ -33,3 +36,11 @@ button.addEventListener('click', function(){
 function getRandomNumber () {
   return Math.floor(Math.random()*colors.length);
 }
+
+toggleButton.addEventListener('click', function(){
+    sidebar.classList.toggle('show-sidebar');
+});
+
+closeButton.addEventListener('click', function(){
+    sidebar.classList.remove('show-sidebar');
+});

@@ -4,7 +4,9 @@ let count = 0;
 // get Elements
 const value = document.querySelector("#value");
 const buttons = document.querySelectorAll(".btn");
-
+const toggleButton = document.querySelector('.sidebar-toggle');
+const closeButton = document.querySelector('.close-btn');
+const sidebar = document.querySelector('.sidebar');
 
 // add EventListeners
 buttons.forEach(function(btn){
@@ -38,4 +40,12 @@ buttons.forEach(function(btn){
     value.textContent = count;
 
   });
+});
+
+toggleButton.addEventListener('click', function(){
+  sidebar.classList.toggle('show-sidebar');
+});
+
+closeButton.addEventListener('click', function(){
+  sidebar.classList.remove('show-sidebar');
 });

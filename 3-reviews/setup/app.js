@@ -48,6 +48,18 @@ const prevButton = document.querySelector('.prev-btn');
 const nextButton = document.querySelector('.next-btn');
 const randomButton = document.querySelector('.random-btn');
 
+const toggleButton = document.querySelector('.sidebar-toggle');
+const closeButton = document.querySelector('.close-btn');
+const sidebar = document.querySelector('.sidebar');
+
+// sidebar toggle
+toggleButton.addEventListener('click', function(){
+  sidebar.classList.toggle('show-sidebar');
+});
+
+closeButton.addEventListener('click', function(){
+  sidebar.classList.remove('show-sidebar');
+});
 // set starting item
 let currentItem = 0;
 
