@@ -4,6 +4,7 @@ const questions = document.querySelectorAll('.question');
 const toggleButton = document.querySelector('.sidebar-toggle');
 const closeButton = document.querySelector('.close-btn');
 const sidebar = document.querySelector('.sidebar');
+const activeSideLink = document.getElementById('side-link-active');
 
 toggleButton.addEventListener('click', function(){
     sidebar.classList.toggle('show-sidebar');
@@ -12,6 +13,10 @@ toggleButton.addEventListener('click', function(){
 closeButton.addEventListener('click', function(){
     sidebar.classList.remove('show-sidebar');
 });
+
+activeSideLink.addEventListener('click', function(){
+    sidebar.classList.remove('show-sidebar');
+  });
 
 questions.forEach(function(question){
     const button = question.querySelector('.question-btn');

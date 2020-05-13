@@ -9,6 +9,7 @@ const navLinks = document.querySelector('.links');
 const toggleButton = document.querySelector('.sidebar-toggle');
 const closeButton = document.querySelector('.close-btn');
 const sidebar = document.querySelector('.sidebar');
+const activeSideLink = document.getElementById('side-link-active');
 
 // EventListeners
 navToggle.addEventListener('click', function(){
@@ -22,5 +23,9 @@ toggleButton.addEventListener('click', function(){
 });
 
 closeButton.addEventListener('click', function(){
+  sidebar.classList.remove('show-sidebar');
+});
+
+activeSideLink.addEventListener('click', function(){
   sidebar.classList.remove('show-sidebar');
 });

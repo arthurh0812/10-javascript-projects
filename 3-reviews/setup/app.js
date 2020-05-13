@@ -51,6 +51,7 @@ const randomButton = document.querySelector('.random-btn');
 const toggleButton = document.querySelector('.sidebar-toggle');
 const closeButton = document.querySelector('.close-btn');
 const sidebar = document.querySelector('.sidebar');
+const activeSideLink = document.getElementById('side-link-active');
 
 // sidebar toggle
 toggleButton.addEventListener('click', function(){
@@ -58,6 +59,10 @@ toggleButton.addEventListener('click', function(){
 });
 
 closeButton.addEventListener('click', function(){
+  sidebar.classList.remove('show-sidebar');
+});
+
+activeSideLink.addEventListener('click', function(){
   sidebar.classList.remove('show-sidebar');
 });
 // set starting item

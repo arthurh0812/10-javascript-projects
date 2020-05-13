@@ -180,8 +180,6 @@ nav {
   box-shadow: var(--dark-shadow);
 }
 .nav-center {
-  width: 90vw;
-  max-width: var(--fixed-width);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -387,6 +385,7 @@ Sidebar
 }
 .show-sidebar {
   transform: translate(0);
+  z-index: 50;
 }
 @media screen and (min-width: 676px) {
   .sidebar {

@@ -9,6 +9,7 @@ const modalOverlay = document.querySelector('.modal-overlay');
 const toggleButton = document.querySelector('.sidebar-toggle');
 const sidebarCloseButton = document.querySelector('.side-close-btn');
 const sidebar = document.querySelector('.sidebar');
+const activeSideLink = document.getElementById('side-link-active');
 
 modalButton.addEventListener('click', function(){
     modalOverlay.classList.add('open-modal');
@@ -25,3 +26,7 @@ toggleButton.addEventListener('click', function(){
 sidebarCloseButton.addEventListener('click', function(){
     sidebar.classList.remove('show-sidebar');
 });
+
+activeSideLink.addEventListener('click', function(){
+    sidebar.classList.remove('show-sidebar');
+  });
