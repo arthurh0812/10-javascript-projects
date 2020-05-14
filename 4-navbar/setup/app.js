@@ -10,11 +10,18 @@ const toggleButton = document.querySelector('.sidebar-toggle');
 const closeButton = document.querySelector('.close-btn');
 const sidebar = document.querySelector('.sidebar');
 const activeSideLink = document.getElementById('side-link-active');
+const main = document.querySelector('main');
+const activeLink = document.getElementById('active');
 
 // EventListeners
 navToggle.addEventListener('click', function(){
   navToggle.classList.toggle('nav-toggle-pressed');
   navLinks.classList.toggle('show-links');
+})
+
+activeLink.addEventListener('click', function(){
+  navToggle.classList.remove('nav-toggle-pressed');
+  navLinks.classList.remove('show-links');
 })
 
 // Sidebar EventListeners
@@ -27,5 +34,9 @@ closeButton.addEventListener('click', function(){
 });
 
 activeSideLink.addEventListener('click', function(){
+  sidebar.classList.remove('show-sidebar');
+});
+
+main.addEventListener('click', function(){
   sidebar.classList.remove('show-sidebar');
 });

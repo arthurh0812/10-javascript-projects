@@ -25,6 +25,7 @@ const toggleButton = document.querySelector('.sidebar-toggle');
 const closeButton = document.querySelector('.close-btn');
 const sidebar = document.querySelector('.sidebar');
 const activeSideLink = document.getElementById('side-link-active');
+const main = document.querySelector('main');
 
 button.addEventListener('click', function(){
   // Pick random number bewteen 0 - 5;
@@ -47,5 +48,9 @@ closeButton.addEventListener('click', function(){
 });
 
 activeSideLink.addEventListener('click', function(){
+  sidebar.classList.remove('show-sidebar');
+});
+
+main.addEventListener('click', function(){
   sidebar.classList.remove('show-sidebar');
 });

@@ -10,6 +10,8 @@ const toggleButton = document.querySelector('.sidebar-toggle');
 const sidebarCloseButton = document.querySelector('.side-close-btn');
 const sidebar = document.querySelector('.sidebar');
 const activeSideLink = document.getElementById('side-link-active');
+const main = document.querySelector('.hero');
+const modal = document.querySelector('.modal-overlay');
 
 modalButton.addEventListener('click', function(){
     modalOverlay.classList.add('open-modal');
@@ -30,3 +32,11 @@ sidebarCloseButton.addEventListener('click', function(){
 activeSideLink.addEventListener('click', function(){
     sidebar.classList.remove('show-sidebar');
   });
+  
+main.addEventListener('click', function(){
+    sidebar.classList.remove('show-sidebar');
+  });
+
+modal.addEventListener('click', function(){
+    sidebar.classList.remove('show-sidebar');
+});
