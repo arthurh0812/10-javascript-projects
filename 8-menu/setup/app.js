@@ -95,6 +95,7 @@ const toggleButton = document.querySelector('.sidebar-toggle');
 const closeButton = document.querySelector('.close-btn');
 const sidebar = document.querySelector('.sidebar');
 const activeSideLink = document.getElementById('side-link-active');
+const main = document.querySelector('main');
 
 // load content
 window.addEventListener('DOMContentLoaded', function(){
@@ -113,6 +114,10 @@ closeButton.addEventListener('click', function(){
 });
 
 activeSideLink.addEventListener('click', function(){
+  sidebar.classList.remove('show-sidebar');
+});
+
+main.addEventListener('click', function(){
   sidebar.classList.remove('show-sidebar');
 });
 

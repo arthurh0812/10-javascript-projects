@@ -307,13 +307,12 @@ Sidebar
   font-size: 1.75rem;
   background: transparent;
   border-color: transparent;
-  color: var(--clr-primary-5);
   transition: var(--transition);
   cursor: pointer;
-  color: var(--clr-red-dark);
+  color: rgb(230, 230, 230);
 }
 .side-close-btn:hover {
-  color: var(--clr-red-light);
+  color: rgb(255, 255, 255);
 }
 .logo {
   justify-self: center;
@@ -378,6 +377,7 @@ Sidebar
   box-shadow: var(--clr-red-dark);
   transition: all 0.2s linear;
   transform: translate(-100%);
+  z-index: 50;
 }
 .show-sidebar {
   transform: translate(0);

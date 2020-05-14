@@ -7,7 +7,7 @@ const toggleButton = document.querySelector('.sidebar-toggle');
 const closeButton = document.querySelector('.close-btn');
 const sidebar = document.querySelector('.sidebar');
 const activeSideLink = document.getElementById('side-link-active');
-const header = document.querySelector('header');
+const main = document.querySelector('#main');
 
 // EventListeners of sidebar
 toggleButton.addEventListener('click', function(){
@@ -22,6 +22,6 @@ activeSideLink.addEventListener('click', function(){
     sidebar.classList.remove('show-sidebar');
   });
 
-header.addEventListener('click', function(){
+main.addEventListener('click', function(){
     sidebar.classList.remove('show-sidebar');
   });
