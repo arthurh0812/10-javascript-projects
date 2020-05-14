@@ -9,6 +9,30 @@ const sidebar = document.querySelector('.sidebar');
 const activeSideLink = document.getElementById('side-link-active');
 const main = document.querySelector('#main');
 
+// elements of video
+const videoButton = document.querySelector('.switch-btn');
+const video = document.querySelector('.video-container');
+
+// preloader
+const preloader = document.querySelector('.preloader');
+
+// EventListeners of video
+videoButton.addEventListener('click', function(){
+  if(!videoButton.classList.contains('slide')){
+    videoButton.classList.add('slide');
+    video.pause();
+  }
+  else {
+    videoButton.classList.remove('slide');
+    video.play();
+  }
+});
+
+// EventListener for preloader
+window.addEventListener('load', function(){
+  preloader.classList.add('hide-preloader');
+});
+
 // EventListeners of sidebar
 toggleButton.addEventListener('click', function(){
     sidebar.classList.toggle('show-sidebar');

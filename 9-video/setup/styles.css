@@ -374,6 +374,7 @@ h1 {
   width: 7rem;
   height: 2rem;
   display: flex;
+  background-color: rgb(255, 255, 255);
   border-radius: var(--radius);
   align-items: center;
   justify-content: space-around;
